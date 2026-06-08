@@ -1,5 +1,7 @@
 /* Universal Selector */
 * {
+    margin:0;
+    padding:0;
     /* color: red; */
 }
 
@@ -62,4 +64,68 @@ a:visited {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
+}
+
+/* Border */
+
+.borderOne {
+    border: 2px double green;
+    
+    /* size style color */
+}
+
+.borderTwo {
+    border-bottom: 5px solid red;
+}
+
+/* border width */
+.borderThree {
+    border-style: solid;
+    /* border-width: 10px; */
+    /* T / R / B / L */
+    /* border-width: 5px 5px; */
+    /* T&B / L&R */
+    /* border-width: 5px 10px 50px; */
+    /* T / L&R / B */
+    border-width: 5px 10px 15px 20px;
+    /* T / R / B / L */
+}
+
+/* border style */
+.borderFour {
+    /* border-style: solid; */
+    /* border-style: dotted solid; */
+    /* border-style: dotted dashed solid; */
+    border-style: dotted dashed solid double;
+    border-width: 5px;
+    border-color: green yellow red blue;
+}
+/* Margin */
+
+.marginOne {
+    border: 2px solid red;
+    /* margin: 50px 0px 0px 0px; */
+    margin-top: 50px;
+}
+
+/* padding */
+
+.paddinOne {
+    border: 2px solid red;
+    /* padding: 50px; */
+    padding-left: 50px;
+}
+
+/* Inline Layout */
+
+.inline {
+    border: 2px solid red;
+    width: 300px;
+    display: inline-block;
+}
+
+.block {
+    border: 2px solid green;
+    width: 300px;
+    display: inline-block;
 }
