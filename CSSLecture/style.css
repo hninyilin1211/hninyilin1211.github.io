@@ -129,3 +129,169 @@ a:visited {
     width: 300px;
     display: inline-block;
 }
+/* --- Float --- */
+
+.float_right_img {
+    width: 50%;
+    float: right;
+}
+
+.clear {
+    clear:both;
+}
+
+.float_left_img {
+    width: 50%;
+    float: left;
+}
+/* --- Flex --- */
+
+.flex 
+{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* *top button */
+    justify-content: center;
+    height: 100px;
+    background-color: red;
+}
+/* Grid */
+
+/* --- Grid --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: auto auto auto; */
+    color: #ffffff;
+    /* grid-row-gap: 40px; */
+    /* grid-column-gap: 30px; */
+    /* grid-gap: 30px; */
+}
+
+.grid_child, .grid div {
+    padding: 20px;
+    text-align: center;
+}
+
+.row_add {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.column_add {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.media {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.media img {
+    width: 100%;
+}
+
+/* Desktop First Approach */
+
+@media screen and (max-width: 1024px) {
+    .media {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .media {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .media {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Mobile First Approach */
+
+.media {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .media {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .media {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Media Queries အဟောင်းများ၏အောက်... */
+
+/* --- Position --- */
+
+.position_relative {
+    border: 2px solid red;
+    width: 1000px;
+    height: 500px;
+}
+
+.position_relative_child {
+    border: 2px solid green;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    /* top bottom left right */
+    top: 5px;
+    left: 50px;
+}
+.position_absolute {
+    border: 2px solid brown;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.position_absolute_child {
+    border: 2px solid yellow;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    /* top button left right */
+    top: 50px;
+    right: 50px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* --- font --- */
+
+.online_font {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Online Font ရဲ့အောက်... */
+
+/* --- offline font --- */
+
+@font-face {
+    font-family: "roboto";
+    src: url("Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+.offline_font {
+    font-family: "roboto";
+}
