@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // ၁။ ရိုးရိုး Function တည်ဆောက်ပြီး ခေါ်သုံးခြင်း (Basic Function)
+        function sayHi() {
+            document.write("Hello World");
+        }
+        sayHi();
+
+
+        // ၂။ သတ်မှတ်ချက် Arguments ပါဝင်သော Function (Function with parameters/arguments)
+        function sum(num1, num2) {
+            let result = num1 + num2;
+            document.write(`<br>The sum of ${num1} and ${num2} is ${result}`);
+        }
+        sum(10, 50);
+        sum(200, 324934820);
+        sum(100, 100);
+        sum(2834823, 39874782);
+
+
+        // ၃။ ကနဦးတန်ဖိုး သတ်မှတ်ထားသော Function (Function with default parameters)
+        function mult(num1 = 50, num2 = 100) {
+            let result = num1 * num2;
+            document.write(`<br>The multiplication of ${num1} and ${num2} is ${result}`);
+        }
+        mult();         // num1=50, num2=100 ကို သုံးသွားမည်။
+        mult(10);       // num1=10, num2=100 ကို သုံးသွားမည်။
+        mult(10, 20);   // num1=10, num2=20 ကို သုံးသွားမည်။
+
+
+        // ၄။ ရလဒ်ပြန်ပေးသော Function (Function with return)
+        function sub(num1, num2) {
+            let result = num1 - num2;
+            return result;
+        }
+        
+        let data = sub(200, 25);
+        document.write(`<br>The result is ${data}`);
+
+        // If statement ဖြင့် စစ်ဆေးခြင်း
+        if (data > 0) {
+            document.write(`<br>The result is greater than 0`);
+        }
+    </script>
+
+
+</body>
+</html>
