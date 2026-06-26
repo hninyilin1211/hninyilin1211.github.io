@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* တစ်ကမ္ဘာလုံးစာ သတ်မှတ်ချက် (CSS Variables) */
+:root {
+    --bg-color: #0a192f;        /* Deep Navy Blue */
+    --card-bg: #112240;         /* Soft Navy Blue */
+    --accent-color: #00f2fe;    /* Neon Cyan */
+    --text-main: #ffffff;       /* Pure White */
+    --text-sub: #a8b2d1;        /* Light Gray */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* ================= 2. Navigation Bar Styling ================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 25, 47, 0.85); /* Glassmorphism Effect */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-sub);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.nav-icons a {
+    color: var(--text-main);
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-icons a:hover {
+    color: var(--accent-color);
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* ================= 3. Hero Section Styling ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 20px 20px;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.hero-content p {
+    color: var(--text-sub);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Shop Now Button */
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.btn i {
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+.btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Hero Image */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+   /* animation: float 4s ease-in-out infinite; /* ပုံလေး ငြိမ့်ငြိမ့်လေး လှုပ်နေအောင် */
+}
+/* Floating Animation 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}*/
+
+/* Responsive ဖုန်း Screen အတွက်  */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+    }
+    .nav-links {
+        display: none; 
+    }
+    .hero-content h1 {
+        font-size: 36px;
+    }
+}
+
+/* ================= 4. Products Section Styling ================= */
+.products-section {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding: 0 40px;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.section-title span {
+    color: var(--accent-color);
+}
+
+/* Products Grid Layout */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+/* Product Card - တစ်ခုလုံးကို အဖြူရောင်ပြောင်းပြီး ပုံကို အပြည့်ဆွဲဆန့်မယ် */
+.product-card {
+    background-color: #ffffff; /* 🌟 ကတ်တစ်ခုလုံးကို Premium အဖြူရောင် ပြောင်းလိုက်ပါတယ် */
+    border-radius: 16px;
+    overflow: hidden; /* ပုံထောင့်လေးတွေ ကတ်အတိုင်း ဝိုင်းသွားအောင် ထိန်းတာပါ */
+    border: none;     /* ဘေးက အပြာရောင် Border တွေကို လုံးဝ ဖျက်ပစ်လိုက်တယ် */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* အမှောင်ထဲမှာ ကတ်လေး ကြွနေအောင် Shadow ထည့်ထားတယ် */
+}
+
+/* Hover Effect: မောက်စ်တင်ရင် ကတ်တစ်ခုလုံး အပေါ်ကြွပြီး Shadow ပိုထွက်လာမယ် */
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 242, 254, 0.2); /* ကတ်အောက်ကနေ Neon မီးလေး မှိန်မှိန်လင်းမယ် */
+}
+
+/* Product Image Box - ပုံကို ဘေးဘောင်အပြည့် ကပ်စေမယ့် နေရာ */
+.product-img {
+    width: 100%;
+    height: 250px; /* အမြင့်ကို ပိုချဲ့လိုက်တယ် */
+    background: #ffffff;
+    display: block; /* Flex မသုံးတော့ဘဲ ပုံကို အပြည့်နေရာယူခိုင်းတာပါ */
+    padding: 0;     /* 🌟 Padding 0 လုပ်လိုက်တဲ့အတွက် ပုံက ဘေးဘောင်တွေကို အပြည့် ကပ်သွားပါပြီ */
+    margin: 0;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;    /* 🌟 ကတ်ရဲ့ အကျယ်အတိုင်း အပြည့် ဖြန့်ခင်းမယ် */
+    height: 100%;   /* ကတ်ရဲ့ အမြင့်အတိုင်း အပြည့် ဖြန့်ခင်းမယ် */
+    object-fit: cover; /* 🌟 ဒါက အရေးကြီးဆုံးပါ! ပုံကို မရှုံ့စေဘဲ ကတ်အပြည့် ဖြည့်ပေးသွားမှာပါ */
+    transition: transform 0.5s ease;
+}
+
+/* မောက်စ်တင်ရင် ကတ်ထဲက ပုံလေးပဲ လှလှပပ ဇူးမ် (Zoom In) ဆွဲသွားမယ် */
+.product-card:hover .product-img img {
+    transform: scale(1.08);
+}
+
+/* Product Info - စာသားနဲ့ ခလုတ်များ ရှိမယ့်နေရာ */
+.product-info {
+    padding: 22px;
+    background: #ffffff; /* အောက်ခြေပိုင်းကိုပါ အဖြူရောင် သန့်သန့်ထားပါတယ် */
+}
+
+.product-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0a192f; /* 🌟 စာသားကို Navy Blue ရင့်ရင့်ပြောင်းလို့ အဖြူပေါ်မှာ ထင်သာမြင်သာ ရှိသွားပါပြီ */
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    color: #ff3366; /* 🌟 စျေးနှုန်းကို ပိုပြီး ဆွဲဆောင်မှုရှိတဲ့ ပန်းရောင်ရင့်ရင့် (သို့) အနီရောင် သုံးပေးထားပါတယ် */
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Add to Cart Button - ခလုတ်ကို ပိုပြီး စမတ်ကျတဲ့ နည်းပညာဆန်ဆန် ပုံစံပြောင်းမယ် */
+.add-to-cart-btn {
+    display: block;
+    text-align: center;
+    background: #0a192f; /* 🌟 ခလုတ်ကို Navy Blue အမှောင်ရောင် သုံးထားတယ် */
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* ခလုတ်ပေါ် မောက်စ်တင်ရင် Neon အပြာရောင် တောက်ပသွားမယ် */
+.add-to-cart-btn:hover {
+    background: var(--accent-color);
+    color: #0a192f;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+/* ================= Categories Section ================= */
+.categories-section {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.category-card {
+    background: var(--card-bg);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-card i {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.category-card:hover {
+    background: rgba(0, 242, 254, 0.05);
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* ================= Features Section ================= */
+.features-section {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-left: 4px solid var(--accent-color);
+}
+
+.feature-box i {
+    font-size: 30px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.feature-box p {
+    color: var(--text-sub);
+    font-size: 14px;
+}
+
+
+
+/* ================= 5. Footer Styling ================= */
+footer {
+    background-color: #071224; /* Background ထက် နည်းနည်းပိုမှောင်တဲ့အရောင် */
+    padding: 25px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-container p {
+    color: var(--text-sub);
+    font-size: 14px;
+}
+
+.footer-container p span {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Social Icon လေးတွေပေါ် မောက်စ်တင်ရင် Neon မီးလင်းမယ့် Effect */
+.footer-socials a:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
