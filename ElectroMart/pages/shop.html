@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMart - Shop All Products</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header & Navigation (Home ကအတိုင်းပဲ ထားပါမယ်) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Electro<span>Mart</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. Shop Page Main Container -->
+    <div class="shop-container">
+        
+        <!-- 🌟 ဘယ်ဘက်ခြမ်း: Sidebar Filters -->
+        <aside class="shop-sidebar">
+            <div class="filter-group">
+                <h3><i class="fas fa-filter"></i> Categories</h3>
+                <label><input type="checkbox" checked> All Products</label>
+                <label><input type="checkbox"> Laptops</label>
+                <label><input type="checkbox"> Smartphones</label>
+                <label><input type="checkbox"> Accessories</label>
+                <label><input type="checkbox"> Smart TV</label>
+            </div>
+
+            <div class="filter-group">
+                <h3><i class="fas fa-tags"></i> Brands</h3>
+                <label><input type="checkbox"> Apple</label>
+                <label><input type="checkbox"> Samsung</label>
+                <label><input type="checkbox"> Sony</label>
+                <label><input type="checkbox"> Asus</label>
+            </div>
+
+            <div class="filter-group">
+                <h3><i class="fas fa-dollar-sign"></i> Price Range</h3>
+                <div class="price-input">
+                    <input type="number" placeholder="Min" min="0">
+                    <span>to</span>
+                    <input type="number" placeholder="Max" min="0">
+                </div>
+                <button class="filter-apply-btn">Apply Filter</button>
+            </div>
+        </aside>
+
+        <!-- 🌟 ညာဘက်ခြမ်း: Product Display Display (ပစ္စည်း ၈ ခုလောက် စီပြပါမယ်) -->
+        <main class="shop-products">
+            <div class="shop-header-bar">
+                <h2>All <span>Products</span></h2>
+                <div class="sort-dropdown">
+                    <label>Sort by: </label>
+                    <select>
+                        <option>Latest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Shop Page ရဲ့ Products Grid -->
+            <div class="shop-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="iPhone"></div>
+                    <div class="product-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p class="price"><span class="old-price">$1,299</span><span class="current-price">$1,099</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="MacBook"></div>
+                    <div class="product-info">
+                        <h3>MacBook Pro M3</h3>
+                        <p class="price"><span class="old-price">$1,699</span><span class="current-price">$1,499</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Buds"></div>
+                    <div class="product-info">
+                        <h3>Galaxy Buds 2 Pro</h3>
+                        <p class="price"><span class="old-price">$249</span><span class="current-price">$199</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Headphones"></div>
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM5</h3>
+                        <p class="price"><span class="old-price">$399</span><span class="current-price">$349</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 5 (ထပ်တိုးပစ္စည်းများ) -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Apple Watch"></div>
+                    <div class="product-info">
+                        <h3>Apple Watch Series 9</h3>
+                        <p class="price"><span class="old-price">$449</span><span class="current-price">$399</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="iPad"></div>
+                    <div class="product-info">
+                        <h3>iPad Air M2</h3>
+                        <p class="price"><span class="old-price">$699</span><span class="current-price">$599</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Asus ROG"></div>
+                    <div class="product-info">
+                        <h3>Asus ROG Ally</h3>
+                        <p class="price"><span class="old-price">$799</span><span class="current-price">$649</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Sony PS5"></div>
+                    <div class="product-info">
+                        <h3>PlayStation 5 Slim</h3>
+                        <p class="price"><span class="old-price">$549</span><span class="current-price">$499</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="lap1.jpg" alt="Sony PS5"></div>
+                    <div class="product-info">
+                        <h3>PlayStation 5 Slim</h3>
+                        <p class="price"><span class="old-price">$549</span><span class="current-price">$499</span></p>
+                        <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ပထမဆုံး iPhone ကတ်ထဲမှာ သွားထည့်ကြည့်ရအောင် 👇 -->
+<div class="product-card">
+    <span class="product-badge sale">Sale</span> <!-- 🌟 တံဆိပ်အသစ် -->
+    <div class="product-img"><img src="lap1.jpg" alt="iPhone"></div>
+    ...
+</div>
+
+<!-- ဒုတိယ MacBook ကတ်ထဲမှာတော့ Hot တံဆိပ်လေး ထည့်မယ် 👇 -->
+<div class="product-card">
+    <span class="product-badge hot">Hot</span> <!-- 🌟 တံဆိပ်အသစ် -->
+    <div class="product-img"><img src="lap1.jpg" alt="MacBook"></div>
+    ...
+</div>
+        </main>
+    </div>
+
+    <!-- 3. Footer (Home ကအတိုင်းပဲ ထားပါမယ်) -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 <span>ElectroMart</span>. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
