@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Return & Variable Scope</title>
+</head>
+<body>
+
+    <script>
+        // ၁။ Return Statement အသုံးပြုပုံ (Function with Return)
+        function sub(num1, num2) {
+            let result = num1 - num2;
+            return result;
+        }
+
+        let data = sub(200, 25);
+        document.write("The result is " + data);
+
+        if (data > 0) {
+            document.write("<br>The result is greater than 0");
+        } else {
+            document.write("<br>The result is less than 0");
+        }
+
+
+        document.write("<br>----------------------------<br>");
+
+
+        // ၂။ Variable Scope (Global Variable vs Local Variable)
+        
+        let a = "hello"; // Global Variable (ဘယ်နေရာကမဆို လှမ်းခေါ်သုံးနိုင်သည်။)
+
+        function test() {
+            let b = "world"; // Local Variable (ဒီ function ထဲမှာပဲ သုံးနိုင်သည်။)
+            
+            document.write(a); // Global ဖြစ်လို့ အလုပ်လုပ်သည်။
+            document.write("<br>" + b); // Local ဖြစ်လို့ အလုပ်လုပ်သည်။
+        }
+
+        test();
+
+        // Function အပြင်ဘက်ကနေ လှမ်းခေါ်ကြည့်ခြင်း
+        document.write("<br>Outside: " + a); // အလုပ်လုပ်သည်။
+        // document.write("<br>Outside: " + b); // Error တက်မည် (b သည် test function ထဲမှာပဲ ရှိသောကြောင့်)
+    </script>
+
+</body>
+</html>
